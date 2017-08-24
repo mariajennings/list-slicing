@@ -126,7 +126,6 @@ def custom_remove(input_list, value):
     #print input_list
 
 
-
 def custom_pop(input_list):
     """Remove the last item in the list and returns it.
 
@@ -142,8 +141,9 @@ def custom_pop(input_list):
         ['Jan', 'Feb']
 
     """
-
-    return None
+    last_input = last(input_list)
+    del input_list[-1]
+    return last_input
 
 
 def custom_index(input_list, value):
