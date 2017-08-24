@@ -96,7 +96,10 @@ def custom_insert(input_list, index, value):
 
     """
 
-    pass
+    trail_list = input_list[index:]
+    del input_list[index:]
+    custom_append(input_list, value)
+    custom_extend(input_list, trail_list)
 
 
 def custom_remove(input_list, value):
@@ -114,8 +117,14 @@ def custom_remove(input_list, value):
         True
 
     """
+    count = 0
+    for item in input_list:
+        if item == value:
+            del input_list[count]
+            break
+        count += 1
+    #print input_list
 
-    pass
 
 
 def custom_pop(input_list):
